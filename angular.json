@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "ng-playground": "apps/ng-playground",
+    "ng-playground-e2e": "apps/ng-playground-e2e"
+  }
+}
