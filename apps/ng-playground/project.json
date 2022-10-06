@@ -1,11 +1,13 @@
 {
   "projectType": "application",
   "sourceRoot": "apps/ng-playground/src",
-  "prefix": "nx-playground",
+  "prefix": "ml",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/ng-playground",
         "index": "apps/ng-playground/src/index.html",
@@ -17,7 +19,9 @@
           "apps/ng-playground/src/favicon.ico",
           "apps/ng-playground/src/assets"
         ],
-        "styles": ["apps/ng-playground/src/styles.scss"],
+        "styles": [
+          "apps/ng-playground/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -82,10 +86,22 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ng-playground"],
+      "outputs": [
+        "coverage/apps/ng-playground"
+      ],
       "options": {
         "jestConfig": "apps/ng-playground/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "deploy": {
+      "executor": "@angular/fire:deploy",
+      "options": {
+        "prerender": false,
+        "ssr": false,
+        "browserTarget": "ng-playground:build:production",
+        "firebaseProject": "nx-playground-2e153",
+        "firebaseHostingSite": "nx-playground-2e153"
       }
     }
   },

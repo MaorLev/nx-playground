@@ -7,6 +7,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
@@ -14,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@client-lib/central-messages": [
+        "libs/client-libs/utils/core/central-messages/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

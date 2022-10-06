@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nx-playground-2e153": {
+      "hosting": {
+        "ng-playground": [
+          "nx-playground-2e153"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nx-playground-2e153"
+  }
+}

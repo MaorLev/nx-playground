@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/client-libs/utils/core/central-messages/src",
+  "prefix": "ml",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client-libs/utils/core/central-messages"],
+      "options": {
+        "jestConfig": "libs/client-libs/utils/core/central-messages/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client-libs/utils/core/central-messages/**/*.ts",
+          "libs/client-libs/utils/core/central-messages/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-lib", "type:util"]
+}
